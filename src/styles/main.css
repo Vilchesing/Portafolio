@@ -3,4 +3,40 @@ body{
   background: #282828;
   margin: 0;
   color: #ededed;
+  padding: 0;
+}
+/*<--estilando la seccion del data container-->*/
+.main-personal-data-container{
+  background: #111b;
+  text-align: center;
+  min-width: 300px;
+  padding-top: 1px;
+
+}
+.main-personal-data-container h1{
+  color: #FFFF83;
+}
+.main-redirect-buttons{
+
+  margin: 16px 4px;
+  padding: 4px 8px;
+  border: 1px solid #000;
+  border-radius: 12px;
+  background: rgb(57, 57, 185);
+  color: #ededed;
+  font-size: 0.9em;
+  transition: background-color 0.5s
+}
+.main-redirect-buttons a{
+  text-decoration: none;
+}
+.main-redirect-buttons a:visited{
+  color: #ededed;
+}
+.main-redirect-buttons:hover{
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #48e;
+}
+.main-img-skills{
+  max-width: 24px;
 }
