@@ -30,8 +30,11 @@ body{
 .main-redirect-buttons a{
   text-decoration: none;
 }
-.main-redirect-buttons a:visited{
+.main-redirect-buttons a:visited {
   color: #ededed;
+}
+.main-redirect-buttons a:visited:hover{
+  color: #48e;
 }
 .main-redirect-buttons:hover{
   background-color: rgba(255, 255, 255, 0.9);
