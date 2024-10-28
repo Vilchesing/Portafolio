@@ -6,12 +6,18 @@
   <title>Portafolio</title>
   <link rel="stylesheet" href="src/styles/main.css">
   <link rel="stylesheet" href="src/styles/components/navbar.css">
+  <link rel="stylesheet" href="src/styles/components/proyect-section.css">
 </head>
 <body>
   <header id="navbar">
-    <script src="src/scripts/loadNavbar.js"></script>
+    <script src="src/scripts/loadComponents.js"></script>
   </header>
-  <main>
+  <main id="main">
+    <div id="proyectModal" class="modal">
+      <span class="close">&times;</span>
+      <img id="img01" alt="Descripción de la imagen" class="modal-content">
+      <div id="caption"></div>
+    </div>
     <div class="main-personal-data-container">
       <div class="main-personal-data">
         <h1>Web Developer</h1>
@@ -31,6 +37,7 @@
         <img src="src/assets/images/git48.png" alt="" class="main-img-skills">
       </div>
     </div>
+    <script src="src/scripts/modal.js"></script>
   </main>
 </body>
 </html>

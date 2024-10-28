@@ -1,0 +1,67 @@
+/*<--estilando la seccion de proyectos-->*/
+.proyects-section-container-wrapper{
+  display: flex;
+  justify-content: center;
+  min-width: 100%;
+  flex-wrap: wrap;
+}
+.proyects-section-container{
+  min-width: 50em;
+  max-width: 50em;
+}
+.proyects-container{
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(1px, 1fr)); /* Adaptable */
+  gap: 30px;
+  container-name: proyects-container;
+  container-type: inline-size;
+  animation: aparecer 2.4s -.6s both;
+  
+
+}
+.proyect{
+  display: grid;
+  grid-template-areas: 
+      "proyects-section-proyect-name proyect-section-proyect-img"
+      "proyects-section-proyect-info proyect-section-proyect-img";
+  grid-template-columns: minmax(160px,400px) minmax(100px,400px);
+  gap: 0px 30px;
+  grid-template-rows: 40px auto;
+  background-color: #3336; /* Color de fondo para resaltar el proyecto */
+  border-radius: 15px;
+  padding: 10px 20px;
+  transition: box-shadow 0.8s;
+  animation: aparecer both;
+  animation-timeline: view();
+  animation-range: cover 10% cover 30%;
+  
+}
+.proyect:hover{
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.proyects-section-proyect-name {
+  grid-area: proyects-section-proyect-name;
+  transition: boxs box-shadow .2s ease-in;
+}
+.proyects-section-proyect-name:hover{
+  box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.6);
+  border: none;
+}
+
+.proyect-section-proyect-img {
+  display: flex;
+  grid-area: proyect-section-proyect-img;
+  align-items: center;
+}
+
+.proyects-section-proyect-info {
+  grid-area: proyects-section-proyect-info;
+}
+.proyect-section-proyect-img img{
+  max-width: 100%;
+  border-radius: 5px;
+}
+.proyect-section-proyect-img img:hover{
+  box-shadow: 0px 0px 10px #fff;
+}
