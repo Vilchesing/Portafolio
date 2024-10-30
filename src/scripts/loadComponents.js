@@ -15,6 +15,7 @@ cargarContenido('src/components/navbar.html', 'navbar')
   .then(() => cargarContenido('src/components/proyects-section.html', 'main'))
   .then(() => cargarContenido('src/components/about-me-section.html', 'main'))
   .then(()=>cargarContenido('src/components/skills-section.html', 'main'))
+  .then(()=>cargarContenido('src/components/footer.html', 'footer'))
   .then(() => {
     console.log("Todos los componentes cargados");
     initModal();

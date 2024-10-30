@@ -1,0 +1,32 @@
+footer{
+  display: flex;
+  min-width: 100%;
+}
+.footer-container{
+  text-align: justify;
+  padding: 0px 30px;
+  font-size: 1.2em;
+  background: #111b;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  min-width: 100%;
+  min-height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 20px 0px;
+  text-align: center;
+}
+.social-icons{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.footer-icons{
+  padding: 0px 10px;
+  filter: invert(100%);
+}
+.footer-icons img{
+  max-height: 24px;
+}
