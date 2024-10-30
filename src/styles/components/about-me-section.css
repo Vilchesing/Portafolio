@@ -19,7 +19,7 @@
       "sobre-mi-section-username sobre-mi-section-education"
       "sobre-mi-section-description sobre-mi-section-education";
   grid-template-columns: minmax(100px,300px) minmax(120px,400px);
-  grid-template-rows: minmax(50px, 50px) minmax(100px, 120px);
+  grid-template-rows: minmax(50px, 50px) minmax(100px, 320px);
   gap: 20px 50px;
   
 }
@@ -44,6 +44,7 @@
   margin-top: 3em;
   min-width: 100%;
   transition: box-shadow 0.8s;
+  max-height: fit-content;
 }
 .sobre-mi-education-data{
   font-size: 0.9em;
