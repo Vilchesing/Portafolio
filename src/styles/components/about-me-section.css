@@ -1,0 +1,65 @@
+@import "/src/styles/variables.css";
+.sobre-mi-section-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  flex-wrap: nowrap;
+  margin-top: 30px;
+}
+.about-me-tittle{
+  color: #47eefa
+}
+.sobre-mi-section-container{
+  min-width: var(--sections-width);
+  max-width: var(--sections-width);
+  display: grid;
+  grid-template-areas: 
+      "sobre-mi-section-username sobre-mi-section-education"
+      "sobre-mi-section-description sobre-mi-section-education";
+  grid-template-columns: minmax(100px,300px) minmax(120px,400px);
+  grid-template-rows: minmax(50px, 50px) minmax(100px, 120px);
+  gap: 20px 50px;
+  
+}
+.sobre-mi-section-username{
+  grid-area:sobre-mi-section-username ;
+  color: #ededed;
+  font-size: 1em;
+}
+.sobre-mi-section-description{
+  grid-area: sobre-mi-section-description;
+  text-wrap-style: pretty;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+.sobre-mi-section-education{
+  grid-area: sobre-mi-section-education;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 5px;
+  height: auto;
+  padding: 5px 15px;
+  margin-top: 3em;
+  min-width: 100%;
+  transition: box-shadow 0.8s;
+}
+.sobre-mi-education-data{
+  font-size: 0.9em;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+.sobre-mi-section-education:hover{
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.sobre-mi-education-data-time{
+  font-size: 0.7em;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+.sobre-mi-section-wrapper{
+  animation: aparecer both;
+  animation-timeline: view();
+  animation-range: cover 10% cover 35%;
+}

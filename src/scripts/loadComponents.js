@@ -1,23 +1,46 @@
 function cargarContenido(url, contenedor) {
-  console.log("Realizando petición a:", url); // Log de la URL para seguimiento
-
-  fetch(url)
-    .then(response => {
-      console.log("Respuesta recibida:", response); // Log del objeto Response completo
-      console.log("Estado de la respuesta:", response.status); // Log del código de estado
-      return response.text();
-    })
+  return fetch(url)
+    .then(response => response.text())
     .then(data => {
-      console.log("Contenido cargado:", data);
       document.getElementById(contenedor).innerHTML += data;
+      return Promise.resolve();
     })
     .catch(error => {
       console.error("Error al cargar contenido:", error);
+      return Promise.reject(error);
     });
 }
 
-// Cargar la navbar
-cargarContenido('src/components/navbar.html', 'navbar');
+cargarContenido('src/components/navbar.html', 'navbar')
+  .then(() => cargarContenido('src/components/proyects-section.html', 'main'))
+  .then(() => cargarContenido('src/components/about-me-section.html', 'main'))
+  .then(() => {
+    console.log("Todos los componentes cargados");
+    initModal();
+  })
+  .catch(error => {
+    console.error("Error al cargar los componentes:", error);
+  });
 
-// Cargar la sección de proyectos
-cargarContenido('src/components/proyects-section.html', 'main');
+// Función para inicializar el modal
+function initModal() {
+  // Código del modal
+  const modal = document.getElementById("proyectModal");
+  const modalImg = document.getElementById("img01");
+  const closeBtn = document.querySelector(".close");
+
+  // Agregar el evento de clic al contenedor principal
+  document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("proyect-img")) {
+      const src = event.target.src; // Obtiene el src de la imagen clickeada
+      modal.style.display = "block";
+      console.log("su")
+      modalImg.src = src; // Asigna el src de la imagen clickeada al modal
+    }
+  });
+
+  // Evento para cerrar el modal
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+}
