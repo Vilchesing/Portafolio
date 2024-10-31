@@ -9,7 +9,7 @@
   margin-top: 30px;
 }
 .about-me-tittle{
-  color: #47eefa
+  color: var(--sections-tittle-color);
 }
 .sobre-mi-section-container{
   min-width: var(--sections-width);
@@ -64,3 +64,46 @@
   animation-timeline: view();
   animation-range: cover 10% cover 35%;
 }
+
+/* --Sobre mi section MediaQuerys-- */
+@media(width < 600px)
+{
+  .sobre-mi-section-wrapper{
+    max-width: 410px;
+    
+  }
+  .sobre-mi-section-container{
+    min-width: 410px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+  .sobre-mi-section-education{
+    margin: 0;
+  }
+  .sobre-mi-section-description, .sobre-mi-section-username, .sobre-mi-personal-data{
+    text-align: center;
+  }
+}
+
+@media(width < 400px)
+{
+  .sobre-mi-section-wrapper{
+    max-width: 380px;
+    
+  }
+  .sobre-mi-section-container{
+    margin-left:10px ;
+    min-width: 380px;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+  }
+  .sobre-mi-section-education{
+    margin: 0;
+  }
+  .sobre-mi-section-description, .sobre-mi-section-username, .sobre-mi-personal-data{
+    text-align: left;
+  }
+}
+

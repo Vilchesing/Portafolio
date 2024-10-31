@@ -30,3 +30,25 @@ footer{
 .footer-icons img{
   max-height: 24px;
 }
+
+/* -- Finalizacion de media querys --*/
+@media(width < 600px)
+{
+  .footer-container{
+    min-width: 50em;
+  }
+  *{
+    overflow-x: hidden;
+  }
+}
+@media(width < 600px)
+{
+  .footer-container{
+    min-width: 50em;
+    text-align: center;
+    justify-content: left;
+  }
+  *{
+    overflow-x: hidden;
+  }
+}

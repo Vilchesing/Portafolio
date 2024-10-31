@@ -5,12 +5,13 @@ body{
   margin: 0;
   color: var(--primary-text-color);
   padding: 0;
+  max-height: 1400px;
 }
 /*<--estilando la seccion del data container-->*/
 .main-personal-data-container{
   background: var(--secondary-background-color);
   text-align: center;
-  min-width: 300px;
+  min-width: 900px;
   padding-top: 1px;
 
 }
@@ -30,12 +31,14 @@ body{
 }
 .main-redirect-buttons a{
   text-decoration: none;
+  
 }
-.main-redirect-buttons a:visited {
-  color: #ededed;
+
+.main-redirect-buttons a:visited, .download-button{
+  color: var(--primary-text-color);
 }
-.main-redirect-buttons a:visited:hover{
-  color: #48e;
+.main-redirect-buttons a:visited:hover, .download-button:hover{
+  color: var(--active-link-color);
 }
 .main-redirect-buttons:hover{
   background-color: rgba(255, 255, 255, 0.9);
@@ -95,3 +98,30 @@ body{
   }
   
 }
+@media(width < 600px)
+{
+  .main-personal-data-container{
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+  }
+  body{
+    overflow-x: hidden;
+  }
+}
+@media(width < 390px)
+{
+  .main-personal-data-container{
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+  }
+}
+
+/* --MediaQuerys--*/

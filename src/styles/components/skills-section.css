@@ -29,3 +29,20 @@
 .skills:hover{
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
+@media(width < 600px)
+{
+  .skills-section-wrapper{
+    display: none;
+  }
+  .skills-section-container{
+    max-width: 0.8em;
+  }
+}
+
+@media(width < 400px)
+{
+  .skills-section-wrapper{
+    display: none;
+  }
+
+}

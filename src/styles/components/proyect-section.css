@@ -1,63 +1,128 @@
-/*<--estilando la seccion de proyectos-->*/
-.proyects-section-container-wrapper{
-  display: flex;
-  justify-content: center;
-  min-width: 100%;
-  flex-wrap: wrap;
+/* <-- Estilando la seccion de proyectos --> */
+.proyects-section-container-wrapper {
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+    flex-wrap: wrap;
 }
-.proyects-section-container{
-  min-width:   var(--sections-width);
-  max-width:   var(--sections-width);
-}
-.proyects-container{
-  display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(1px, 1fr)); /* Adaptable */
-  gap: 30px;
-  container-name: proyects-container;
-  container-type: inline-size;
-  animation: aparecer 2.4s -.6s both;
-  
 
+.proyects-section-container {
+    min-width: var(--sections-width);
+    max-width: var(--sections-width);
 }
-.proyect{
-  display: grid;
-  grid-template-areas: 
-      "proyects-section-proyect-name proyect-section-proyect-img"
-      "proyects-section-proyect-info proyect-section-proyect-img";
-  grid-template-columns: minmax(160px,400px) minmax(100px,400px);
-  gap: 0px 30px;
-  grid-template-rows: 40px auto;
-  background-color: #3336; /* Color de fondo para resaltar el proyecto */
-  border-radius: 15px;
-  padding: 10px 20px;
-  transition: box-shadow 0.8s;
+
+.proyect-section-tittle {
+    color: var(--sections-tittle-color);
 }
-.proyect:hover{
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+
+.proyects-container {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(1px, 1fr)); /* Adaptable */
+    gap: 30px;
+    container-name: proyects-container;
+    container-type: inline-size;
+    animation: aparecer 2.4s -.6s both;
+}
+
+.proyect {
+    display: grid;
+    grid-template-areas:
+    "proyects-section-proyect-name proyect-section-proyect-img"
+    "proyects-section-proyect-info proyect-section-proyect-img";
+    grid-template-columns: minmax(160px, 400px) minmax(100px, 400px);
+    gap: 0px 30px;
+    grid-template-rows: 40px auto;
+    background-color: #3336; /* Color de fondo para resaltar el proyecto */
+    border-radius: 15px;
+    padding: 10px 20px;
+    transition: box-shadow 0.8s;
+}
+
+.proyect:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .proyects-section-proyect-name {
-  grid-area: proyects-section-proyect-name;
-  transition: boxs box-shadow .2s ease-in;
+    grid-area: proyects-section-proyect-name;
+    transition: boxs box-shadow .2s ease-in;
 }
-.proyects-section-proyect-name:hover{
-  box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.6);
-  border: none;
+
+.proyects-section-proyect-name:hover {
+    box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.6);
+    border: none;
 }
 
 .proyect-section-proyect-img {
-  display: flex;
-  grid-area: proyect-section-proyect-img;
-  align-items: center;
+    display: flex;
+    grid-area: proyect-section-proyect-img;
+    align-items: center;
 }
 
 .proyects-section-proyect-info {
-  grid-area: proyects-section-proyect-info;
+    grid-area: proyects-section-proyect-info;
+    letter-spacing: 1px;
+    text-wrap-mode: pretty;
 }
-.proyect-section-proyect-img img{
-  max-width: 100%;
-  border-radius: 5px;
+
+.proyect-section-proyect-img img {
+    max-width: 100%;
+    border-radius: 5px;
 }
-.proyect-section-proyect-img img:hover{
-  box-shadow: 0px 0px 10px #fff;
+
+.proyect-section-proyect-img img:hover {
+    box-shadow: 0px 0px 10px #fff;
+}
+
+  /* <-- MediaQuerys de la seccion proyects --> */
+
+@media (width < 600px) {
+    .proyects-section-container-wrapper {
+min-width: 600px;
+}
+
+.proyects-section-container {
+    min-width: 520px;
+}
+
+.proyects-container {
+    max-width: 380px;
+    grid-template-columns: minmax(320px, 520px);
+    margin: auto;
+}
+
+.proyect {
+    display: block;
+}
+
+    .proyect-section-tittle {
+    text-align: center;
+    }
+}
+
+@media (width < 400px){
+    .proyects-container{
+        margin: 0;
+    }
+}
+
+@media (width < 400px) {
+    .proyects-section-container-wrapper {
+    min-width: 400px;
+}
+
+    .proyects-section-container {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+    .proyects-container {
+    max-width: 380px;
+    margin-left: 50px;
+    }
+
+    .proyect-section-tittle {
+    text-align: left;
+    margin-left: 70px;
+    }
 }
