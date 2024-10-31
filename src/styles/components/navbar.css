@@ -36,9 +36,11 @@
 }
 .nav-item a{
   text-decoration: none;
+  color: var(--primary-text-color);
+
 }
 .nav-item a:visited{
-  color: #ededed;
+  color: var(--primary-text-color);
 }
 
 

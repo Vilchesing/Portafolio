@@ -31,13 +31,14 @@ body{
 }
 .main-redirect-buttons a{
   text-decoration: none;
+  color: var(--primary-text-color);
   
 }
 
-.main-redirect-buttons a:visited, .download-button{
+.main-redirect-buttons a:visited, .download-button a:visited{
   color: var(--primary-text-color);
 }
-.main-redirect-buttons a:visited:hover, .download-button:hover{
+.main-redirect-buttons a:hover{
   color: var(--active-link-color);
 }
 .main-redirect-buttons:hover{
