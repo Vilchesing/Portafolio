@@ -41,14 +41,10 @@ footer{
     overflow-x: hidden;
   }
 }
-@media(width < 600px)
+@media(width < 415px)
 {
   .footer-container{
-    min-width: 50em;
-    text-align: center;
-    justify-content: left;
+    justify-content: left
   }
-  *{
-    overflow-x: hidden;
-  }
+
 }

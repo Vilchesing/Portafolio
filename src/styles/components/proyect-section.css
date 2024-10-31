@@ -105,7 +105,7 @@ min-width: 600px;
     }
 }
 
-@media (width < 400px) {
+@media (width < 415px) {
     .proyects-section-container-wrapper {
     min-width: 400px;
 }

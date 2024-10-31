@@ -112,7 +112,7 @@ body{
     overflow-x: hidden;
   }
 }
-@media(width < 390px)
+@media(width < 415px)
 {
   .main-personal-data-container{
     min-width: 400px;
