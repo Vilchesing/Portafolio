@@ -10,12 +10,14 @@
 }
 
 .skills-section-container{
-  min-width:   var(--sections-width);
-  max-width:   var(--sections-width);
+  min-width: var(--sections-width);
+  max-width: var(--sections-width);
   display: flex;
   flex-direction: row;
   gap: 0px 40px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: baseline;
   justify-content: space-between;
 }
 .skills{
