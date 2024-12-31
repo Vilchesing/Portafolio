@@ -1,6 +1,6 @@
 footer{
   display: flex;
-  min-width: 100%;
+  min-width: 100vw;
 }
 .footer-container{
   text-align: justify;
@@ -9,7 +9,7 @@ footer{
   background: #111b;
   letter-spacing: 1px;
   line-height: 1.4;
-  min-width: 100%;
+  width: 100%;
   min-height: 40px;
   display: flex;
   flex-direction: row;
@@ -35,16 +35,14 @@ footer{
 @media(width < 600px)
 {
   .footer-container{
-    min-width: 50em;
+    width: 100%;
+
   }
-  *{
-    overflow-x: hidden;
-  }
+
 }
 @media(width < 415px)
 {
   .footer-container{
-    justify-content: left
   }
 
 }

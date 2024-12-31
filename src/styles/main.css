@@ -6,12 +6,15 @@ body{
   color: var(--primary-text-color);
   padding: 0;
   max-height: 1400px;
+  overflow-x: hidden;
+
 }
+
 /*<--estilando la seccion del data container-->*/
 .main-personal-data-container{
   background: var(--secondary-background-color);
   text-align: center;
-  min-width: 900px;
+  width: 100vw;
   padding-top: 1px;
 
 }
@@ -99,30 +102,20 @@ body{
   }
   
 }
-@media(width < 600px)
+
+
+@media(width <= 600px)
 {
   .main-personal-data-container{
-    min-width: 600px;
+
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-evenly;
   }
-  body{
-    overflow-x: hidden;
-  }
+
 }
-@media(width < 415px)
-{
-  .main-personal-data-container{
-    min-width: 400px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-evenly;
-  }
-}
+
 
 /* --MediaQuerys--*/

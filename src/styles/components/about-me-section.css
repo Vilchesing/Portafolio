@@ -12,13 +12,11 @@
   color: var(--sections-tittle-color);
 }
 .sobre-mi-section-container{
-  min-width: var(--sections-width);
-  max-width: var(--sections-width);
   display: grid;
   grid-template-areas: 
       "sobre-mi-section-username sobre-mi-section-education"
       "sobre-mi-section-description sobre-mi-section-education";
-  grid-template-columns: minmax(100px,300px) minmax(120px,400px);
+  grid-template-columns: minmax(100px,300px) minmax(100px,400px);
   grid-template-rows: minmax(50px, 50px) minmax(100px, 320px);
   gap: 20px 50px;
   
@@ -45,6 +43,7 @@
   min-width: 100%;
   transition: box-shadow 0.8s;
   max-height: fit-content;
+  box-sizing: border-box;
 }
 .sobre-mi-education-data{
   font-size: 0.9em;
@@ -66,36 +65,50 @@
 }
 
 /* --Sobre mi section MediaQuerys-- */
-@media(width < 600px)
-{
+
+@media(width < 800px){
   .sobre-mi-section-wrapper{
-    max-width: 410px;
-    
-  }
-  .sobre-mi-section-container{
-    min-width: 410px;
-    max-width: 500px;
+    box-sizing: border-box;
+    width: 100vw;
+}
+  .sobre-mi-section-container {
+    width: 80%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+}
+
+
+@media(width < 600px) {
+
+  .sobre-mi-section-container {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
   }
-  .sobre-mi-section-education{
+
+  .sobre-mi-section-education {
     margin: 0;
   }
-  .sobre-mi-section-description, .sobre-mi-section-username, .sobre-mi-personal-data{
-    text-align: center;
+
+  .sobre-mi-section-description,
+  .sobre-mi-section-username,
+  .sobre-mi-personal-data {
+    text-align: left;
   }
+
 }
+
 
 @media(width < 400px)
 {
   .sobre-mi-section-wrapper{
-    max-width: 380px;
+
     
   }
   .sobre-mi-section-container{
     margin-left:10px ;
-    min-width: 380px;
-    max-width: 380px;
     display: flex;
     flex-direction: column;
   }

@@ -2,13 +2,21 @@
 .proyects-section-container-wrapper {
     display: flex;
     justify-content: center;
-    min-width: 100%;
+    width: 100vw;
     flex-wrap: wrap;
+}
+#inicio{
+    width: 100vw;
 }
 
 .proyects-section-container {
-    min-width: var(--sections-width);
-    max-width: var(--sections-width);
+    width: 80%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .proyect-section-tittle {
@@ -16,12 +24,15 @@
 }
 
 .proyects-container {
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(1px, 1fr)); /* Adaptable */
-    gap: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0px;
     container-name: proyects-container;
     container-type: inline-size;
     animation: aparecer 2.4s -.6s both;
+    width: 100%;
+    align-items: center;
 }
 
 .proyect {
@@ -29,13 +40,14 @@
     grid-template-areas:
     "proyects-section-proyect-name proyect-section-proyect-img"
     "proyects-section-proyect-info proyect-section-proyect-img";
-    grid-template-columns: minmax(160px, 400px) minmax(100px, 400px);
+    grid-template-columns: minmax(120px, 350px) minmax(120px, 350px);
     gap: 0px 30px;
     grid-template-rows: 40px auto;
     background-color: #3336; /* Color de fondo para resaltar el proyecto */
     border-radius: 15px;
     padding: 10px 20px;
     transition: box-shadow 0.8s;
+    width: fit-content;
 }
 
 .proyect:hover {
@@ -74,28 +86,23 @@
 }
 
   /* <-- MediaQuerys de la seccion proyects --> */
+@media(width <800px) {
+    .proyects-section-container-wrapper{
+        width: 100vw;
+    }
+    .proyects-section-container{
+        width: 80%;
+    }
+}
 
 @media (width < 600px) {
-    .proyects-section-container-wrapper {
-min-width: 600px;
-}
-
-.proyects-section-container {
-    min-width: 520px;
-}
-
-.proyects-container {
-    max-width: 380px;
-    grid-template-columns: minmax(320px, 520px);
-    margin: auto;
-}
 
 .proyect {
     display: block;
 }
 
     .proyect-section-tittle {
-    text-align: center;
+    text-align: left;
     }
 }
 
@@ -106,9 +113,7 @@ min-width: 600px;
 }
 
 @media (width < 415px) {
-    .proyects-section-container-wrapper {
-    min-width: 400px;
-}
+
 
     .proyects-section-container {
     display: block;
@@ -116,13 +121,5 @@ min-width: 600px;
     justify-content: flex-start;
 }
 
-    .proyects-container {
-    max-width: 380px;
-    margin-left: 50px;
-    }
 
-    .proyect-section-tittle {
-    text-align: left;
-    margin-left: 70px;
-    }
 }
