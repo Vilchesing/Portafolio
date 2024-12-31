@@ -58,6 +58,13 @@
     grid-area: proyects-section-proyect-name;
     transition: boxs box-shadow .2s ease-in;
 }
+.web-links{
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+.web-links :visited {
+    color: var(--primary-text-color);
+}
 
 .proyects-section-proyect-name:hover {
     box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.6);

@@ -35,7 +35,7 @@ function initModal() {
   document.addEventListener("click", (event) => {
     if (event.target.classList.contains("proyect-img")) {
       const src = event.target.src; // Obtiene el src de la imagen clickeada
-      modal.style.display = "block";
+      modal.style.display = "flex";
       console.log("su")
       modalImg.src = src; // Asigna el src de la imagen clickeada al modal
     }
